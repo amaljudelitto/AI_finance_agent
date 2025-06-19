@@ -1,3 +1,6 @@
+from google.colab import files
+uploaded = files.upload()  
+
 from dotenv import load_dotenv
 import os
 
