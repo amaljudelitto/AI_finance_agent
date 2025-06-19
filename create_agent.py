@@ -7,7 +7,7 @@ llm = ChatOpenAI(temperature=0)
 
 # Define the function to get stock price
 def get_stock_price(symbol):
-    ticker = yf.Ticker(symbol)
+    ticker = yf.Ticker(symbol.NS)
     todays_data = ticker.history(period='1d')
     return f"The current stock price of {symbol} is ${todays_data['Close'].iloc[-1]:.2f}"
 
